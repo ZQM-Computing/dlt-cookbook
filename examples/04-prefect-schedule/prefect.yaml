@@ -1,0 +1,15 @@
+# prefect.yaml — SKETCH, not a verbatim Prefect 3.9.0 file.
+# The verbatim schema is a validation output (see README).
+# The deploy call in flow.py is the authoritative shape; this file
+# records the intended deployment in human-readable form.
+name: quakes-daily
+flow_name: quakes-daily-flow
+entrypoint: flow.py:quakes_daily_flow
+schedule:
+  cron: "0 6 * * *"  # fleet cron (Node-1/Node-3/Node-4 USGS flows)
+work_pool:
+  # PLACEHOLDER — replace with your pool.
+  # Fleet pools: default (Node-1), n3-pool (Node-3), n4-pool (Node-4).
+  name: default-pool
+  # Local process-pool deploys need EntrypointType.MODULE_PATH
+  # (see flow.py); the string form fails Prefect's check.

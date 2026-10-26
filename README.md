@@ -15,7 +15,7 @@ A **dlt cookbook** for ELT pipelines from Python into Postgres and DuckDB. Patte
 
 ## Repository role and status
 
-**Status:** Active, public — seeding. Pattern passes land in follow-up work from fleet-verified setups; the tables below list what is planned, not what is already written.
+**Status:** Active, public — first pattern pass written (design-only, gate 1 target; runtime validation pending). The table below lists what is written; no pattern has been runtime-validated yet.
 
 **What this repository is:** dlt patterns — see the table below.
 
@@ -33,28 +33,31 @@ Data engineers who load APIs and files into queryable tables with minimal boiler
 - Python 3.11+
 - Postgres or DuckDB as a destination
 
-## Patterns (planned)
+## Patterns
 
-| # | Example | What it will demonstrate |
-|---|---------|--------------------------|
-| 01 | `01-first-pipeline` | A first pipeline: source, resource, and destination |
-| 02 | `02-postgres-dest` | Loading into Postgres with merge and replace semantics |
-| 03 | `03-duckdb-dest` | Loading into DuckDB for analytical queries |
-| 04 | `04-prefect-schedule` | Scheduling a dlt pipeline under Prefect (see prefect-cookbook) |
+| # | Example | Status | What it demonstrates |
+|---|---------|--------|----------------------|
+| 01 | [01-first-pipeline](examples/01-first-pipeline/README.md) | Written (design-only) | A first pipeline: source, resource, and destination |
+| 02 | [02-postgres-dest](examples/02-postgres-dest/README.md) | Written (design-only) | Loading into Postgres with merge and replace semantics |
+| 03 | [03-duckdb-dest](examples/03-duckdb-dest/README.md) | Written (design-only) | Loading into DuckDB for analytical queries |
+| 04 | [04-prefect-schedule](examples/04-prefect-schedule/README.md) | Written (design-only) | Scheduling a dlt pipeline under Prefect (see prefect-cookbook) |
 
 ## Repository layout
 
 ```text
 dlt-cookbook/
-├── examples/          # pattern passes, landing in follow-up work
+├── examples/01-first-pipeline/    # first pipeline into DuckDB
+├── examples/02-postgres-dest/     # merge and replace semantics
+├── examples/03-duckdb-dest/       # analytical queries
+├── examples/04-prefect-schedule/  # Prefect flow + deployment
 ├── README.md
 └── LICENSE
 ```
 
 ## Roadmap
 
-- First pattern pass: the first two table rows
-- Second pass: the remaining rows, from fleet-verified setups
+- First pattern pass: complete (all 4 patterns, design-only).
+- Next: gate-3 runtime validation against the fleet's dlt installs.
 
 ## Contributing
 
