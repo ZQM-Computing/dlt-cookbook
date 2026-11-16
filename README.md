@@ -11,7 +11,7 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-A **dlt cookbook** for ELT pipelines from Python into Postgres and DuckDB. Patterns are drawn from the ZQM fleet's dlt 1.31.0 installs and its USGS demo pipelines (191 rows kept on Node-1 and Node-3). It is intended for Data engineers who load APIs and files into queryable tables with minimal boilerplate. Validate each pattern against your own data, software versions, and operating environment before adopting it.
+A **dlt cookbook** for ELT pipelines from Python into Postgres and DuckDB. Patterns are drawn from the ZQM fleet's dlt 1.31.0 installs (as of Oct 2026; verify against the current fleet) and its USGS demo pipelines (191 rows kept on Node-1 and Node-3). It is intended for Data engineers who load APIs and files into queryable tables with minimal boilerplate. Validate each pattern against your own data, software versions, and operating environment before adopting it.
 
 ## Repository role and status
 
